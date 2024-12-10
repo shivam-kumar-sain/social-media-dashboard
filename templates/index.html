@@ -1,0 +1,1046 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="preset-1" data-pc-sidebar-caption="true" data-pc-layout="vertical" data-pc-direction="ltr"
+  dir="ltr" data-pc-theme_contrast="" data-pc-theme="light">
+<!-- Mirrored from ableproadmin.com/tailwind/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 24 Nov 2024 05:56:55 GMT -->
+
+<head>
+  <title>Live Preview | Able Pro Dashboard Template</title><!-- [Meta] -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description"
+    content="Able Pro is trending dashboard template made using Bootstrap 5 design framework. Able Pro is available in Bootstrap, React, CodeIgniter, Angular,  and .net Technologies.">
+  <meta name="keywords"
+    content="Bootstrap admin template, Dashboard UI Kit, Dashboard Template, Backend Panel, react dashboard, angular dashboard">
+  <meta name="author" content="Phoenixcoded">
+  <link rel="icon" href="{% static 'assets/images/favicon.svg' %}" type="image/x-icon">
+  <link href="../../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- [Page specific CSS] end --><!-- [Font] Family -->
+  <link href="{% static 'css/plugins/animate.min.css' %}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'fonts/inter/inter.css' %}" id="main-font-link">
+  <link rel="stylesheet" href="{% static 'fonts/phosphor/duotone/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/tabler-icons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/feather.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/material.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" id="main-style-link">
+  <script src="{% static 'js/tech-stack.js' %}"></script>
+</head>
+
+<body><!-- [ Pre-loader ] start -->
+  <div class="loader-bg">
+    <div class="loader-track">
+      <div class="loader-fill"></div>
+    </div>
+  </div><!-- [ Pre-loader ] End --><!-- [ Header ] start -->
+  <header id="home"
+    class="flex items-center flex-col justify-center min-h-screen overflow-hidden relative py-[100px] bg-[url('../images/landing/img-headerbg.jpg')] dark:bg-[url(../images/landing/img-headerbg-dark.jpg)] bg-cover">
+    <!-- [ Nav ] start -->
+    <nav
+      class="navbar bg-theme-cardbg dark:bg-themedark-cardbg bg-opacity-75 dark:bg-opacity-75 fixed top-0 z-50 w-full backdrop-blur shadow-[0_0_24px_rgba(27,46,94,.05)] dark:shadow-[0_0_24px_rgba(27,46,94,.05)]">
+      <div class="container">
+        <div class="static flex py-4 items-center justify-between sm:relative">
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+            <div class="flex flex-1 flex-shrink-0 items-center gap-2"><img class="h-7 w-auto"
+                src="{% static 'assets/images/logo-dark.svg' %}" alt="Your Company"> <span
+                class="badge bg-success-500/10 text-success-500 rounded-full theme-version">v1.0.0</span></div>
+            <div class="grow">
+              <div class="justify-end flex flex-row space-x-2 p-0 me-3"><a href="{% url 'dashboard' %}"
+                  class="hidden sm:inline-block text-theme-bodycolor text-opacity-75 hover:text-opacity-100 hover:text-primary-500 dark:text-themedark-bodycolor rounded-md px-3 py-2 text-base font-medium transition-all">Dashboard</a>
+                <a href="elements/bc_alert.html"
+                  class="hidden sm:inline-block text-theme-bodycolor text-opacity-75 hover:text-opacity-100 hover:text-primary-500 dark:text-themedark-bodycolor rounded-md px-3 py-2 text-base font-medium transition-all">Component</a>
+                <a href="https://phoenixcoded.gitbook.io/able-pro"
+                  class="hidden sm:inline-block text-theme-bodycolor text-opacity-75 hover:text-opacity-100 hover:text-primary-500 dark:text-themedark-bodycolor rounded-md px-3 py-2 text-base font-medium transition-all">Documentation</a>
+                <div class="dropdown inline-block"><a
+                    class="hidden sm:inline-block text-theme-bodycolor text-opacity-75 hover:text-opacity-100 hover:text-primary-500 dark:text-themedark-bodycolor rounded-md px-3 py-2 text-base font-medium transition-all"
+                    data-pc-toggle="dropdown" href="#">Live Preview <i class="ti ti-chevron-down ms-1"></i></a>
+                  <div
+                    class="dropdown-menu drp-technology nav-drp-tech-scrollble overflow2-y-auto max-h-[calc(100vh_-_100px)] *:whitespace-nowrap">
+                    <a class="dropdown-item gap-2" href="dashboard/index.html" target="_blank"><img
+                        src="assets/images/landing/tech-tailwind.svg" alt="img" class="img-fluid w-[30px]">Tailwind
+                    </a><a class="dropdown-item gap-2" href="https://ableproadmin.com/dashboard/index.html"
+                      target="_blank"><img src="assets/images/landing/tech-bootstrap.svg" alt="img"
+                        class="img-fluid w-[30px]">Bootstrap 5</a> <a class="dropdown-item gap-2"
+                      href="https://ableproadmin.com/react/dashboard/default" target="_blank"><img
+                        src="assets/images/landing/tech-react.svg" alt="img" class="img-fluid w-[30px]">React MUI</a> <a
+                      class="dropdown-item gap-2" href="https://ableproadmin.com/angular/default/dashboard/default"
+                      target="_blank"><img src="assets/images/landing/tech-angular.svg" alt="img"
+                        class="img-fluid w-[30px]">Angular Material</a> <a class="dropdown-item gap-2"
+                      href="https://ableproadmin.com/codeigniter/default/public/dashboard-default" target="_blank"><img
+                        src="assets/images/landing/tech-codeigniter.svg" alt="img"
+                        class="img-fluid w-[30px]">CodeIgniter</a> <a class="dropdown-item gap-2"
+                      href="https://able-pro.azurewebsites.net/Dashboard/Index" target="_blank"><img
+                        src="assets/images/landing/tech-net.svg" alt="img" class="img-fluid w-[30px]">ASP.net</a> <a
+                      class="dropdown-item gap-2"
+                      href="https://able-pro-material-next-ts-navy.vercel.app/dashboard/default" target="_blank"><img
+                        src="assets/images/landing/tech-nextjs.svg" alt="img" class="img-fluid w-[30px]">NextJS</a> <a
+                      class="dropdown-item gap-2" href="https://ableproadmin.com/vue/dashboard/default"
+                      target="_blank"><img src="assets/images/landing/tech-vuetify.svg" alt="img"
+                        class="img-fluid w-[30px]">Vue</a> <a class="dropdown-item gap-2"
+                      href="https://phplaravel-207002-4524103.cloudwaysapps.com/build/dashboards/default"
+                      target="_blank"><img src="assets/images/landing/tech-l-v.svg" alt="img"
+                        class="img-fluid w-[30px]">Vue+Laravel</a> <a class="dropdown-item gap-2 grayscale" href="#"
+                      data-pc-toggle="tooltip" data-pc-placement="top" data-pc-title="Live Preview not available"><img
+                        src="assets/images/landing/tech-django.svg" alt="img" class="img-fluid w-[30px]">Django</a> <a
+                      class="dropdown-item gap-2 grayscale" href="#" data-pc-toggle="tooltip" data-pc-placement="top"
+                      data-pc-title="Live Preview not available"><img src="assets/images/landing/tech-flask.svg"
+                        alt="img" class="img-fluid w-[30px]">Flask</a> <a class="dropdown-item gap-2 grayscale" href="#"
+                      data-pc-toggle="tooltip" data-pc-placement="top" data-pc-title="Live Preview not available"><img
+                        src="assets/images/landing/tech-nodejs.svg" alt="img" class="img-fluid w-[30px]">NodeJS</a> <a
+                      class="dropdown-item gap-2 grayscale" href="#" data-pc-toggle="tooltip" data-pc-placement="top"
+                      data-pc-title="Live Preview not available"><img src="assets/images/landing/tech-l-b.svg" alt="img"
+                        class="img-fluid w-[30px]">Laravel Bootstrap</a> <a class="dropdown-item gap-2 grayscale"
+                      href="#" data-pc-toggle="tooltip" data-pc-placement="top"
+                      data-pc-title="Live Preview not available"><img src="assets/images/landing/tech-svelteKit.svg"
+                        alt="img" class="img-fluid w-[30px]">SvelteKit</a><!-- <a class="dropdown-item gap-2" target="_blank"
+                      href="https://www.figma.com/file/6XqmRhRmkr33w0EFD49acY/Able-Pro--v9.0-Figma-Preview?type=design&node-id=46-226114&mode=design&t=4FS2Lw6WxsmJ3RLm-0"><img
+                        src="assets/images/landing/tech-figma.svg" alt="img" class="img-fluid w-[30px]" />Figma</a> -->
+                  </div>
+                </div><a href="https://phoenixcoded.gitbook.io/able-pro" type="button"
+                  class="flex sm:hidden items-center justify-center bg-gray-200 text-gray-900 hover:bg-gray-900 hover:text-white focus:ring-white focus:ring-offset-gray-800 h-10 w-10 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-2"><i
+                    class="ti ti-file-text"></i> </a><a href="https://ableproadmin.com/dashboard/index.html"
+                  type="button"
+                  class="flex sm:hidden items-center justify-center bg-gray-200 text-gray-900 hover:bg-gray-900 hover:text-white focus:ring-white focus:ring-offset-gray-800 h-10 w-10 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-2"><i
+                    class="ti ti-dashboard"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center"><a
+              href="https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template" type="button"
+              class="flex items-center justify-center bg-gray-200 text-gray-900 hover:bg-gray-900 hover:text-white focus:ring-white focus:ring-offset-gray-800 h-10 w-10 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-2"><i
+                class="ti ti-brand-github"></i> </a><a href="https://1.envato.market/zNkqj6"
+              class="btn-success btn ml-3"><span class="hidden md:inline-block">Purchase Now</span> <i
+                class="ti ti-external-link"></i></a></div>
+        </div>
+      </div>
+    </nav><!-- [ Nav ] end -->
+    <div class="container">
+      <div class="w-full md:w-10/12 text-center mx-auto">
+        <h1 class="text-[22px] md:text-[36px] lg:text-[55px] leading-[1.2] mb-5 wow fadeInUp" data-wow-delay="0.2s">
+          Explore One of the <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[rgb(37,161,244)] via-[rgb(249,31,169)] to-[rgb(37,161,244)] bg-[length:400%_100%] bg-left-top animate-[move-bg_24s_infinite_linear]">Featured
+            Dashboard</span> Template in Themeforest</h1>
+        <div class="wow fadeInUp" data-wow-delay="0.3s">
+          <div class="w-8/12 mx-auto">
+            <p class="text-muted text-[14px] sm:text-[16px] mb-0">Able Pro is the one of the Featured admin dashboard
+              template in Envato Marketplace and used by over 2.5K+ Customers wordwide.</p>
+          </div>
+        </div>
+        <div class="my-5 sm:my-12 wow fadeInUp" data-wow-delay="0.4s"><a href="elements/bc_alert.html"
+            class="btn btn-outline-secondary mr-2 mt-1">Explore Components</a>
+          <div class="dropdown inline-block mt-1"><a
+              class="btn btn-primary dropdown-toggle arrow-none d-inline-flex align-items-center"
+              data-pc-toggle="dropdown" href="#">Live Preview <i class="ti ti-chevron-down ms-1"></i></a>
+            <div
+              class="dropdown-menu drp-technology drp-tech-scrollble overflow2-y-auto max-h-[40vh] *:whitespace-nowrap">
+              <a class="dropdown-item gap-2" href="dashboard/index.html" target="_blank"><img
+                  src="assets/images/landing/tech-tailwind.svg" alt="img" class="img-fluid w-[30px]">Tailwind </a><a
+                class="dropdown-item gap-2" href="https://ableproadmin.com/dashboard/index.html" target="_blank"><img
+                  src="assets/images/landing/tech-bootstrap.svg" alt="img" class="img-fluid w-[30px]">Bootstrap 5</a> <a
+                class="dropdown-item gap-2" href="https://ableproadmin.com/react/dashboard/default" target="_blank"><img
+                  src="assets/images/landing/tech-react.svg" alt="img" class="img-fluid w-[30px]">React MUI</a> <a
+                class="dropdown-item gap-2" href="https://ableproadmin.com/angular/default/dashboard/default"
+                target="_blank"><img src="assets/images/landing/tech-angular.svg" alt="img"
+                  class="img-fluid w-[30px]">Angular Material</a> <a class="dropdown-item gap-2"
+                href="https://ableproadmin.com/codeigniter/default/public/dashboard-default" target="_blank"><img
+                  src="assets/images/landing/tech-codeigniter.svg" alt="img" class="img-fluid w-[30px]">CodeIgniter</a>
+              <a class="dropdown-item gap-2" href="https://able-pro.azurewebsites.net/Dashboard/Index"
+                target="_blank"><img src="assets/images/landing/tech-net.svg" alt="img"
+                  class="img-fluid w-[30px]">ASP.net</a> <a class="dropdown-item gap-2"
+                href="https://able-pro-material-next-ts-navy.vercel.app/dashboard/default" target="_blank"><img
+                  src="assets/images/landing/tech-nextjs.svg" alt="img" class="img-fluid w-[30px]">NextJS</a> <a
+                class="dropdown-item gap-2" href="https://ableproadmin.com/vue/dashboard/default" target="_blank"><img
+                  src="assets/images/landing/tech-vuetify.svg" alt="img" class="img-fluid w-[30px]">Vue</a> <a
+                class="dropdown-item gap-2"
+                href="https://phplaravel-207002-4524103.cloudwaysapps.com/build/dashboards/default" target="_blank"><img
+                  src="assets/images/landing/tech-l-v.svg" alt="img" class="img-fluid w-[30px]">Vue+Laravel</a> <a
+                class="dropdown-item gap-2 grayscale" href="#" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><img src="assets/images/landing/tech-django.svg" alt="img"
+                  class="img-fluid w-[30px]">Django</a> <a class="dropdown-item gap-2 grayscale" href="#"
+                data-pc-toggle="tooltip" data-pc-placement="top" data-pc-title="Live Preview not available"><img
+                  src="assets/images/landing/tech-flask.svg" alt="img" class="img-fluid w-[30px]">Flask</a> <a
+                class="dropdown-item gap-2 grayscale" href="#" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><img src="assets/images/landing/tech-nodejs.svg" alt="img"
+                  class="img-fluid w-[30px]">NodeJS</a> <a class="dropdown-item gap-2 grayscale" href="#"
+                data-pc-toggle="tooltip" data-pc-placement="top" data-pc-title="Live Preview not available"><img
+                  src="assets/images/landing/tech-l-b.svg" alt="img" class="img-fluid w-[30px]">Laravel Bootstrap</a> <a
+                class="dropdown-item gap-2 grayscale" href="#" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><img src="assets/images/landing/tech-svelteKit.svg" alt="img"
+                  class="img-fluid w-[30px]">SvelteKit</a><!-- <a class="dropdown-item gap-2" target="_blank"
+                href="https://www.figma.com/file/6XqmRhRmkr33w0EFD49acY/Able-Pro--v9.0-Figma-Preview?type=design&node-id=46-226114&mode=design&t=4FS2Lw6WxsmJ3RLm-0"><img
+                  src="assets/images/landing/tech-figma.svg" alt="img" class="img-fluid w-[30px]" />Figma</a> --></div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center text-center gap-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="head-rating-block">
+            <div class="star mb-2"><i class="fas fa-star text-warning-500"></i> <i
+                class="fas fa-star text-warning-500"></i> <i class="fas fa-star text-warning-500"></i> <i
+                class="fas fa-star text-warning-500"></i> <i class="fas fa-star-half-alt text-warning-500"></i></div>
+            <h4 class="mb-0">4.7/5 <small class="text-muted font-normal">Ratings</small></h4>
+          </div>
+          <div><span class="inline-block w-px h-8 bg-theme-border dark:bg-themedark-border"></span></div>
+          <div>
+            <h5 class="mb-2"><small class="text-muted f-w-400">Sales</small></h5>
+            <h4 class="mb-0">2.5K+</h4>
+          </div>
+        </div>
+        <div class="mt-12 text-center wow fadeInUp" data-wow-delay="1s">
+          <p class="mb-5 text-muted">- Click Below Icon to Preview Each Tech Demos -</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="technology-block group scrollble-tech-block flex items-center justify-center absolute bottom-0 inset-x-0 border-y border-theme-border dark:border-themedark-border bg-theme-cardbg dark:bg-themedark-cardbg">
+      <ul
+        class="flex items-center justify-center group-[.simplebar-scrollable-x]:justify-start *:shrink-0 border-x divide-x border-theme-border dark:border-themedark-border divide-theme-border dark:divide-themedark-border mb-0">
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview Tailwind"><a href="dashboard/index.html"><img
+              src="assets/images/landing/tech-tailwind.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview Bootstrap 5"><a href="https://ableproadmin.com/dashboard/index.html"><img
+              src="assets/images/landing/tech-bootstrap.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview React MUI"><a href="https://ableproadmin.com/react/" target="_blank"><img
+              src="assets/images/landing/tech-react.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview Angular Material UI"><a href="https://ableproadmin.com/angular/default/"
+            target="_blank"><img src="assets/images/landing/tech-angular.svg" alt="img" class="img-fluid p-2.5"></a>
+        </li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview CodeIgniter"><a href="https://ableproadmin.com/codeigniter/default/public/"
+            target="_blank"><img src="assets/images/landing/tech-codeigniter.svg" alt="img" class="img-fluid p-2.5"></a>
+        </li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview ASP.net"><a href="https://able-pro.azurewebsites.net/" target="_blank"><img
+              src="assets/images/landing/tech-net.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview NextJs"><a href="https://able-pro-material-next-ts-navy.vercel.app/"
+            target="_blank"><img src="assets/images/landing/tech-nextjs.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview Vue"><a href="https://ableproadmin.com/vue/" target="_blank"><img
+              src="assets/images/landing/tech-vuetify.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Click to Preview Vue+Laravel"><a
+            href="https://phplaravel-207002-4524103.cloudwaysapps.com/build/pages/landing" target="_blank"><img
+              src="assets/images/landing/tech-l-v.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Live Preview not available"><a href="#" target="_blank"><img
+              src="assets/images/landing/tech-django.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Live Preview not available"><a href="#" target="_blank"><img
+              src="assets/images/landing/tech-flask.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Live Preview not available"><a href="#" target="_blank"><img
+              src="assets/images/landing/tech-nodejs.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Live Preview not available"><a href="#" target="_blank"><img
+              src="assets/images/landing/tech-l-b.svg" alt="img" class="img-fluid p-2.5"></a></li>
+        <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Live Preview not available"><a href="#" target="_blank"><img
+              src="assets/images/landing/tech-svelteKit.svg" alt="img" class="img-fluid p-2.5"></a></li><!-- <li class="list-inline-item" data-pc-toggle="tooltip" data-pc-placement="top"
+          data-pc-title="Figma Design System">
+          <a href="https://www.figma.com/file/6XqmRhRmkr33w0EFD49acY/Able-Pro--v9.0-Figma-Preview?type=design&node-id=46-226114&mode=design&t=4FS2Lw6WxsmJ3RLm-0"
+            target="_blank"><img src="assets/images/landing/tech-figma.svg" alt="img" class="img-fluid p-2.5" /></a>
+        </li> -->
+      </ul>
+    </div>
+  </header><!-- [ Header ] End --><!-- [ Technologies ] start -->
+  <section id="technologies" class="py-10 sm:py-[100px]">
+    <div class="container title mb-12">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
+        <div class="md:w-8/12 xl:w-6/12 mx-auto">
+          <h2 class="mb-3 font-semibold">Available Technologies</h2>
+          <p class="mb-0">Explore the Demos of Able Pro in multiple technologies.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container technology-block">
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-tailwind.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Tailwind</h4>
+              <p class="text-muted mb-4">Able Pro with Tailwind CSS lets developers create sleek, professional
+                interfaces quickly. Tailwind's utility classes ensure consistent styling across all devices.</p><a
+                class="btn btn-light-dark mt-2" href="dashboard/index.html" target="_blank"><i
+                  class="ti ti-external-link"></i> Preview Tailwind</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-bootstrap.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Bootstrap 5</h4>
+              <p class="text-muted mb-4">Able Pro Bootstrap 5 - the top choice for responsive, mobile-first design, you
+                can achieve both professional functionality and visual appeal.</p><a class="btn btn-light-dark mt-2"
+                href="https://ableproadmin.com/dashboard/index.html" target="_blank"><i class="ti ti-external-link"></i>
+                Preview Bootstrap</a> <a class="btn btn-icon btn-link-dark mt-2" target="_blank"
+                data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Click to Download Free Able Pro Bootstrap 5 Admin Template"
+                href="https://links.codedthemes.com/vYUWM"><i class="ti ti-brand-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-react-1.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">React Material-UI</h4>
+              <p class="text-muted mb-4">Able Pro React dashboard template is a powerful tool that utilizes the
+                Material-UI component library to create stunning and intuitive user interfaces</p><a
+                class="btn btn-light-dark mt-2" href="https://ableproadmin.com/react" target="_blank"><i
+                  class="ti ti-external-link"></i> Preview React</a> <a class="btn btn-icon btn-link-dark mt-2"
+                target="_blank" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Click to Download Free Able Pro React Dashboard Template"
+                href="https://links.codedthemes.com/vYUWM"><i class="ti ti-brand-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-net.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Asp.net</h4>
+              <p class="text-muted mb-4">Able Pro .NET version is a robust dashboard template designed specifically for
+                .NET developers. Its comes with a wide range of pre-built components.</p><a
+                class="btn btn-light-dark mt-2" href="https://able-pro.azurewebsites.net/" target="_blank"><i
+                  class="ti ti-external-link"></i> Preview .net</a> <a class="btn btn-icon btn-link-dark mt-2"
+                target="_blank" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Click to Download Free Able Pro ASP.net Dashboard Template"
+                href="https://links.codedthemes.com/vYUWM"><i class="ti ti-brand-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-codeigniter.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">CodeIgniter</h4>
+              <p class="text-muted mb-4">Able Pro CodeIgniter version is a powerful dashboard template built
+                specifically for developers who use the CodeIgniter PHP framework with Bootstrap.</p><a
+                class="btn btn-light-dark mt-2" href="https://ableproadmin.com/codeigniter/default/public/"
+                target="_blank"><i class="ti ti-external-link"></i> Preview CodeIgniter</a> <a
+                class="btn btn-icon btn-link-dark mt-2" target="_blank" data-pc-toggle="tooltip" disabled="disabled"
+                data-pc-placement="top" data-pc-title="Click to Download Free Able Pro CodeIgniter Dashboard Template"
+                href="https://links.codedthemes.com/vYUWM"><i class="ti ti-brand-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-angular.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Angular Material</h4>
+              <p class="text-muted mb-4">Able Pro Angular dashboard template is a powerful tool that utilizes the Google
+                Material component library to create stunning and intuitive user interfaces.</p><a
+                class="btn btn-light-dark mt-2" href="https://ableproadmin.com/angular/default/" target="_blank"><i
+                  class="ti ti-external-link"></i> Preview Angular</a> <a class="btn btn-icon btn-link-dark mt-2"
+                target="_blank" data-pc-toggle="tooltip" disabled="disabled" data-pc-placement="top"
+                data-pc-title="Click to Download Free Able Pro Angular Dashboard Template"
+                href="https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template/tree/master"><i
+                  class="ti ti-brand-github"></i></a>
+            </div>
+          </div>
+        </div><!-- <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body">
+              <img src="assets/images/landing/tech-figma.svg" alt="img" class="img-fluid" />
+              <h4 class="my-3">Figma</h4>
+              <p class="text-muted mb-4">Able Pro comes with a Figma design file that allows you to customize and
+                fine-tune your dashboard to meet your specific needs.</p>
+              <a class="btn btn-light-dark mt-2" href="https://links.codedthemes.com/mQZrX" target="_blank"><i
+                  class="ti ti-external-link"></i> Preview Figma</a>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-nextjs.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">NextJs</h4>
+              <p class="text-muted mb-4">Able Pro NextJs dashboard template is a powerful tool that utilizes the
+                Material-UI component library to create stunning and intuitive user interfaces.</p><a
+                class="btn btn-light-dark mt-2" href="https://able-pro-material-next-ts-navy.vercel.app/"
+                target="_blank"><i class="ti ti-external-link"></i> Preview NextJs</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-vuetify.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Vue</h4>
+              <p class="text-muted mb-4">Able Pro Vue stands out as a versatile and powerful - Vue with Vuetify
+                dashboard combines modern design principles with robust functionality.</p><a
+                class="btn btn-light-dark mt-2" href="https://ableproadmin.com/vue/" target="_blank"><i
+                  class="ti ti-external-link"></i> Preview Vue</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-l-v.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Vue+Laravel</h4>
+              <p class="text-muted mb-4">Able Pro Vue stands out as a versatile and powerful - Vue with Vuetify
+                dashboard combines modern design principles with robust functionality.</p><a
+                class="btn btn-light-dark mt-2"
+                href="https://phplaravel-207002-4524103.cloudwaysapps.com/build/pages/landing" target="_blank"><i
+                  class="ti ti-external-link"></i> Preview Vue+Laravel</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-django.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Django</h4>
+              <p class="text-muted mb-4">Able Pro Django is a powerful dashboard template designed for developers. it
+                offers an extensive collection of pre-built components for seamless web development.</p>
+              <div class="inline-block" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><a class="btn btn-light-dark mt-2 disabled" href="#"
+                  target="_blank" disabled="disabled"><i class="ti ti-external-link"></i> Preview Django</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-flask.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Flask</h4>
+              <p class="text-muted mb-4">Able Pro Flask is a versatile dashboard solution that offers a rich set of
+                pre-built components to simplify web development.</p>
+              <div class="inline-block" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><a class="btn btn-light-dark mt-2 disabled" href="#"
+                  target="_blank" disabled="disabled"><i class="ti ti-external-link"></i> Preview Flask</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-nodejs.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">NodeJS</h4>
+              <p class="text-muted mb-4">Able Pro Node.js combines flexibility and functionality with a variety of
+                pre-built components tailored for Node.js, which make it easier to develop.</p>
+              <div class="inline-block" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><a class="btn btn-light-dark mt-2 disabled" href="#"
+                  target="_blank" disabled="disabled"><i class="ti ti-external-link"></i> Preview NodeJS</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-l-b.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">Laravel Bootstrap</h4>
+              <p class="text-muted mb-4">Able Pro Laravel with Bootstrap provides a powerful set of tools and
+                components, crafted specifically for Laravel, to simplify and accelerate your development process.</p>
+              <div class="inline-block" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><a class="btn btn-light-dark mt-2 disabled" href="#"
+                  target="_blank" disabled="disabled"><i class="ti ti-external-link"></i> Preview Laravel Bootstrap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="card mb-0 h-full">
+            <div class="card-body"><img src="assets/images/landing/tech-svelteKit.svg" alt="img" class="img-fluid">
+              <h4 class="my-3">SvelteKit</h4>
+              <p class="text-muted mb-4">Able Pro Svelte provides an extensive toolkit and components, allowing you to
+                build dynamic and responsive interfaces with ease and efficiency.</p>
+              <div class="inline-block" data-pc-toggle="tooltip" data-pc-placement="top"
+                data-pc-title="Live Preview not available"><a class="btn btn-light-dark mt-2 disabled" href="#"
+                  target="_blank" disabled="disabled"><i class="ti ti-external-link"></i> Preview SvelteKit</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- [ Technologies ] End --><!-- [ Top Features apps ] start -->
+  <section class="py-10 sm:py-[100px]">
+    <div class="container title mb-12">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
+        <div class="md:w-8/12 xl:w-6/12 mx-auto">
+          <h2 class="mb-3 font-semibold">Complete Combo</h2>
+          <p class="mb-0">Able Pro caters to the needs of both developers and designers, whether they are beginners or
+            experts.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid grid-cols-12 gap-6"><!-- <div class="col-span-12 md:col-span-6 lg:col-span-4 self-center">
+          <div class="card">
+            <div class="card-body mt-2">
+              <h5 class="mb-3">Figma Design System</h5>
+              <p class="text-muted mb-4"> Check the live preview of Able Pro Figma design file. Figma file included in
+                all
+                licenses. </p>
+              <img class="pt-2" src="assets/images/landing/feature-figma.png" width="100%" />
+              <a class="btn btn-light-dark mt-4"
+                href="https://www.figma.com/file/6XqmRhRmkr33w0EFD49acY/Able-Pro--v9.0-Figma-Preview?type=design&node-id=46-226114&mode=design&t=4FS2Lw6WxsmJ3RLm-0"
+                target="_blank">Preview Figma <i class="ti ti-external-link"></i></a>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-span-12 md:col-span-6 lg:col-span-6">
+          <div class="card mb-0 h-full">
+            <div class="card-body mt-2">
+              <h5 class="mb-3">Explore Components</h5>
+              <p class="text-muted mb-4">Access all components of Able Pro in one place to make your development work
+                easier.</p><img class="pt-2" src="assets/images/landing/feature-components.png" width="100%"> <a
+                class="btn btn-light-dark mt-4" href="elements/bc_alert.html" target="_blank">View All Components <i
+                  class="ti ti-external-link"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-6">
+          <div class="card mb-0 h-full">
+            <div class="card-body mt-2">
+              <h5 class="mb-3">Documentation</h5>
+              <p class="text-muted mb-4">Find solutions and navigate through our helper guide with ease.</p><img
+                class="pt-2" src="assets/images/landing/feature-documentation.png" width="100%"> <a
+                class="btn btn-light-dark mt-4" href="https://phoenixcoded.gitbook.io/able-pro" target="_blank">Check
+                Documentation <i class="ti ti-external-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- [ Top Features ] End --><!-- [ working apps ] start -->
+  <section class="bg-primary-500 overflow-hidden py-10 sm:py-[100px]">
+    <div class="container title mb-12">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
+        <div class="md:w-8/12 xl:w-6/12 mx-auto">
+          <h2 class="mb-3 text-white">Working Conceptual Apps</h2>
+          <p class="mb-0 text-white text-opacity-75">Each App is carefully crafted to achieve the best feature rich
+            working concept for your project</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid grid-cols-12 gap-6">
+        <div
+          class="col-span-12 md:col-span-6 self-center app_dotsContainer *:*:p-[30px] *:*:my-2.5 *:*:block *:block *:*:rounded-xl *:*:cursor-pointer *:*:transition-all hover:*:*:bg-white/10 hover:*:*:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+          <a class="group wow fadeInUp" data-wow-delay="0.2s" href="#app_1">
+            <div class="group-[.active]:bg-white/10 group-[.active]:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+              <h4 class="text-white font-medium">Chat</h4>
+              <p class="mb-0 text-white text-opacity-75">Power your web apps with the conceptual chat app of Able Pro
+                Dashboard Template.</p>
+            </div>
+          </a><a class="group wow fadeInUp" data-wow-delay="0.2s" href="#app_2">
+            <div class="group-[.active]:bg-white/10 group-[.active]:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+              <h4 class="text-white font-medium">E-commerce</h4>
+              <p class="mb-0 text-white text-opacity-75">Collection, Filter, Product Detail, Add New Product, and
+                Checkout pages makes your e-commerce app complete.</p>
+            </div>
+          </a><a class="group wow fadeInUp" data-wow-delay="0.4s" href="#app_3">
+            <div class="group-[.active]:bg-white/10 group-[.active]:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+              <h4 class="text-white font-medium">Inbox</h4>
+              <p class="mb-0 text-white text-opacity-75">Compose Message, List Message (email), Detailed Inbox pages
+                well suited for any conversation based web apps.</p>
+            </div>
+          </a><a class="group wow fadeInUp" data-wow-delay="0.6s" href="#app_4">
+            <div class="group-[.active]:bg-white/10 group-[.active]:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+              <h4 class="text-white font-medium">User Management</h4>
+              <p class="mb-0 text-white text-opacity-75">Detailed pages for User Management like Profile settings, role,
+                account settings, social profile and more to explore.</p>
+            </div>
+          </a></div>
+        <div class="col-span-12 md:col-span-6 self-center relative wow fadeInRight" dir="ltr" data-wow-delay="0.4s">
+          <div
+            class="owl-carousel owl-theme screen-slide img-app-moke ltr:origin-top-left rtl:origin-top-right scale-150">
+            <div class="item" data-hash="app_1"><img src="assets/images/landing/chat.png" alt="img"
+                class="img-fluid rounded"></div>
+            <div class="item" data-hash="app_2"><img src="assets/images/landing/e-commerce.png" alt="img"
+                class="img-fluid rounded"></div>
+            <div class="item" data-hash="app_3"><img src="assets/images/landing/mail.png" alt="img"
+                class="img-fluid rounded"></div>
+            <div class="item" data-hash="app_4"><img src="assets/images/landing/social.png" alt="img"
+                class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- [ working apps ] End --><!-- [ Applications apps ] start -->
+  <section class="bg-white dark:bg-themedark-cardbg py-10 sm:py-[100px]">
+    <div class="container title mb-0">
+      <div class="grid grid-cols-12 gap-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-span-12 md:col-span-8 self-center">
+          <h2 class="mb-3"><span class="text-primary-500">TRY</span> BEFORE BUY</h2>
+          <p class="text-muted mb-4 md:mb-0">Download the Free MIT Able Pro Dashboard Template before make your purchase
+            decision.</p>
+        </div>
+        <div class="col-span-12 md:col-span-4 self-center md:text-right"><a class="btn btn-lg btn-outline-secondary m-1"
+            href="dashboard/index.html" target="_blank">Check out Pro Version</a> <a class="btn btn-lg btn-primary m-1"
+            data-pc-toggle="tooltip" data-pc-placement="bottom"
+            href="https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template" target="_blank"
+            data-pc-title="Free version of Able Pro"><i class="ti ti-brand-github"></i> Free (Soon)</a></div>
+      </div>
+    </div>
+  </section><!-- [ Applications apps ] End --><!-- [ support team apps ] start -->
+  <section class="support-team-block overflow-hidden py-10 sm:py-[100px]">
+    <div class="container title mb-12">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
+        <div class="md:w-8/12 xl:w-6/12 mx-auto">
+          <h2 class="mb-3 font-semibold">They <span class="text-primary">love</span> Able Pro, Now your turn 😍</h2>
+          <!-- prettier-ignore -->
+          <p class="mb-0">We take pride in our Dashboard development, which has been consistently rated 4.6/5 by our
+            satisfied customers. It brings us joy to share the positive feedback we have received from our loyal
+            clients.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container" dir="ltr">
+      <div class="marquee marquee-text relative h-[150px] inline-flex wow fadeInUp" data-wow-delay="0.4s">
+        <ul class="list-inline marquee-list flex flex-nowrap gap-x-6 overflow-hidden items-center justify-center mb-2">
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-1.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“Amazing template for fast develop.💎“</p><small>devbar - <span
+                        class="text-muted">Customizability</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“Code quality is amazing. Design is astonishing. very easy to customize..😍“</p>
+                    <small>shahabblouch - <span class="text-muted">Code Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-3.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“This has been one of my favorite admin dashboards to use. 😍“</p><small>htmhell -
+                      <span class="text-muted">Design Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-4.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“Excellent support, if we need any modification, they are doing immediately“</p>
+                    <small>hemchandkodali - <span class="text-muted">Customer Support</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-5.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“For developers like me, this is the total package! 😍 “</p><small>sumaranjum -
+                      <span class="text-muted">Feature Availability</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-1.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“I love the looks of Able Pro 7.0. I really like the colors you guys have chosen for
+                      this theme. It looks really nice.. 💎“</p><small>ritelogic - <span
+                        class="text-muted">Other</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“The author is very nice and solved my problem inmediately 😍 “</p><small>richitela
+                      - <span class="text-muted">Customer Support</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-3.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“Very universal admin template“</p><small>Genstiade - <span
+                        class="text-muted">Feature Availability</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-4.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“An amazing template. Very good design, good quality code and also very good
+                      customer support. 💎“</p><small>macugi - <span class="text-muted">Code Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-5.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“I have it running on a medium size site that is geared towards displaying stats
+                      tables and custom forms, a blog and a forum. 😍 “</p><small>RizzoFrank - <span
+                        class="text-muted">Design Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="marquee-1 marquee-text relative h-[150px] inline-flex wow fadeInUp" data-wow-delay="0.5s">
+        <ul class="list-inline marquee-list flex flex-nowrap gap-x-6 overflow-hidden items-center justify-center mb-2">
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-1.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“Perfect for my need. Elegant look n feel with blazing fast code. 💎“</p>
+                    <small>ThemeShakers - <span class="text-muted">Feature Availability</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“Excellent template! It's also very well organized and easy to find our way..“</p>
+                    <small>Danlec - <span class="text-muted">Code Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-3.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“Their Team is great and working great always. when you need help...“</p>
+                    <small>manojkumarhr - <span class="text-muted">Customer Support</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-4.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“Wonderful theme, full of features, with ton of addons.“</p><small>momennoor - <span
+                        class="text-muted">Design Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-5.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“An excellent theme. It contains everything you need to open complex projects. 😍 “
+                    </p><small>Vihtora - <span class="text-muted">Other</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-1.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“Excellent template. Very complete. 💎“</p><small>mundodascasas - <span
+                        class="text-muted">Code Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-2.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3">
+                    <p class="mb-1">“It serves my all purposes well and one thing it was great because i didn't require
+                      designer at all.“</p><small>amit1134 - <span class="text-muted">Code Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-3.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“I highly recommend Able pro admin template and team phoenixcoded item. It was best
+                      purchase on themeforest for me.“</p><small>vishalmg - <span
+                        class="text-muted">Flexibility</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card support-card w-[420px] mb-1">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="shrink-0"><img src="assets/images/user/avatar-4.jpg" alt="user-image"
+                      class="rounded-full w-[60px]"></div>
+                  <div class="grow ml-3"><!-- prettier-ignore -->
+                    <p class="mb-1">“5 stars are for the excellent support, that is brilliant! The design is very cool
+                      and...!“</p><small>ab69aho - <span class="text-muted">Code Quality</span></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section><!-- [ support team apps ] End --><!-- [ companies apps ] start -->
+  <section class="bg-white dark:bg-themedark-cardbg py-10 sm:py-[100px]">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-12">
+          <h2 class="font-semibold">Trusted By</h2>
+          <p class="my-4 mb-8 wow fadeInUp" data-wow-delay="0.2s">From Startups to Fortune 500 companies using our
+            Template for their product.</p>
+          <div
+            class="flex flex-wrap gap-6 justify-center client-block g-5 *:*:opacity-40 *:*:grayscale *:cursor-pointer *:*:transition-all *:*:duration-300 hover:*:*:grayscale-0 hover:*:*:opacity-100">
+            <div class="wow fadeInRight" data-wow-delay="0.4s"><img src="assets/images/landing/client-eagames.svg"
+                alt="img" class="img-fluid"></div>
+            <div class="wow fadeInRight" data-wow-delay="0.4s"><img src="assets/images/landing/client-vodafone.svg"
+                alt="img" class="img-fluid"></div>
+            <div class="wow fadeInRight" data-wow-delay="0.4s"><img src="assets/images/landing/client-crystal-1.svg"
+                alt="img" class="img-fluid"></div>
+            <div class="wow fadeInRight" data-wow-delay="0.5s"><img src="assets/images/landing/client-haswent-2.svg"
+                alt="img" class="img-fluid"></div>
+            <div class="wow fadeInRight" data-wow-delay="0.6s"><img src="assets/images/landing/client-haxter-3.svg"
+                alt="img" class="img-fluid"></div>
+            <div class="wow fadeInRight" data-wow-delay="0.7s"><img src="assets/images/landing/client-montecito-4.svg"
+                alt="img" class="img-fluid"></div>
+            <div class="wow fadeInRight" data-wow-delay="0.8s"><img src="assets/images/landing/client-slingshot.svg"
+                alt="img" class="img-fluid"></div>
+            <div class="wow fadeInRight" data-wow-delay="0.9s"><img src="assets/images/landing/client-totalstudio-5.svg"
+                alt="img" class="img-fluid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- [ companies apps ] End --><!-- [ footer apps ] start -->
+  <footer class="footer pt-10 sm:pt-[100px] pb-5">
+    <div class="container title mb-0">
+      <div class="grid grid-cols-12 gap-6 align-items-center wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-span-12 md:col-span-8">
+          <h2 class="mb-3 font-normal">Stay connected with us</h2>
+          <p class="mb-4 mb-md-0">Simply submit your email, we share you the top news related to Able Pro feature
+            updates, roadmap, and news.</p>
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <div class="flex gap-4 my-4 md:my-10 items-center justify-center flex-wrap">
+            <div class="grow"><input type="email" class="form-control" placeholder="Enter your email"></div>
+            <div class="shrink-0"><button class="btn btn-primary">Submit</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-[60px] mb-5 border-y border-theme-border dark:border-themedark-border">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 md:col-span-4 wow fadeInUp" data-wow-delay="0.2s"><img
+              src="assets/images/logo-dark.svg" alt="image" class="img-fluid mb-4">
+            <p class="mb-5">Phoenixcoded has gained the trust of over 5.5K customers since 2015, thanks to our
+              commitment to delivering high-quality products. Our experienced team players are responsible for managing
+              Able Pro.</p>
+          </div>
+          <div class="col-span-12 md:col-span-8">
+            <div class="grid grid-cols-12 gap-6">
+              <div class="col-span-12 sm:col-span-4 wow fadeInUp" data-wow-delay="0.6s">
+                <h5 class="mb-3 sm:mb-5">Company</h5>
+                <ul
+                  class="list-unstyled footer-link *:my-[14px] *:transition-all *:duration-200 hover:*:text-primary-500">
+                  <li><a href="https://themeforest.net/user/phoenixcoded" target="_blank">Profile</a></li>
+                  <li><a href="https://themeforest.net/user/phoenixcoded/portfolio" target="_blank">Portfolio</a></li>
+                  <li><a href="https://themeforest.net/user/phoenixcoded/followers" target="_blank">Follow Us</a></li>
+                  <li><a href="https://phoenixcoded.net/" target="_blank">Website</a></li>
+                </ul>
+              </div>
+              <div class="col-span-12 sm:col-span-4 wow fadeInUp" data-wow-delay="0.8s">
+                <h5 class="mb-3 sm:mb-5">Help & Support</h5>
+                <ul
+                  class="list-unstyled footer-link *:my-[14px] *:transition-all *:duration-200 hover:*:text-primary-500">
+                  <li><a href="https://phoenixcoded.gitbook.io/able-pro/" target="_blank">Documentation</a></li>
+                  <li><a href="https://phoenixcoded.gitbook.io/able-pro/" target="_blank">Feature Request</a></li>
+                  <li><a href="https://phoenixcoded.gitbook.io/able-pro/" target="_blank">RoadMap</a></li>
+                  <li><a href="https://phoenixcoded.authordesk.app/" target="_blank">Support</a></li>
+                  <li><a href="https://themeforest.net/user/phoenixcoded#contact" target="_blank">Email Us</a></li>
+                </ul>
+              </div>
+              <div class="col-span-12 sm:col-span-4 wow fadeInUp" data-wow-delay="1s">
+                <h5 class="mb-3 sm:mb-5">Useful Resources</h5>
+                <ul
+                  class="list-unstyled footer-link *:my-[14px] *:transition-all *:duration-200 hover:*:text-primary-500">
+                  <li><a href="https://themeforest.net/page/item_support_policy" target="_blank">Support Policy</a></li>
+                  <li><a href="https://themeforest.net/licenses/standard" target="_blank">Licenses Term</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex items-center justify-between gap-6">
+        <div class="grow my-1 wow fadeInUp" data-wow-delay="0.4s">
+          <p class="mb-0">© Handcrafted by Team <a href="https://themeforest.net/user/phoenixcoded"
+              class="text-primary-500" target="_blank">Phoenixcoded</a></p>
+        </div>
+        <div class="shrink-0 my-1">
+          <ul class="list-inline footer-sos-link mb-0">
+            <li class="list-inline-item wow fadeInUp" data-wow-delay="0.4s"><a class="hover:text-primary-500"
+                href="https://fb.com/phoenixcoded"><svg class="pc-icon w-[22px] h-[22px]">
+                  <use xlink:href="#custom-facebook"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer><!-- [ footer apps ] End --><!-- [ Main Content ] end -->
+  <script src="../../code.jquery.com/jquery-3.6.1.min.js"></script><!-- Required Js -->
+  <script src="assets/js/plugins/simplebar.min.js"></script>
+  <script src="assets/js/plugins/popper.min.js"></script>
+  <script src="assets/js/icon/custom-icon.js"></script>
+  <script src="assets/js/plugins/feather.min.js"></script>
+  <script src="assets/js/component.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/script.js"></script><!-- [Page Specific JS] start -->
+  <script src="assets/js/plugins/wow.min.js"></script>
+  <script src="../../cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
+  <script src="../../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>// Start [ Menu hide/show on scroll ]
+    let ost = 0;
+    document.addEventListener('scroll', function () {
+      let cOst = document.documentElement.scrollTop;
+      if (cOst == 0) {
+        document.querySelector('.navbar').classList.add('top-nav-collapse');
+      } else if (cOst > ost) {
+        document.querySelector('.navbar').classList.add('top-nav-collapse');
+        document.querySelector('.navbar').classList.remove('default');
+      } else {
+        document.querySelector('.navbar').classList.add('default');
+        document.querySelector('.navbar').classList.remove('top-nav-collapse');
+      }
+      ost = cOst;
+    });
+    // End [ Menu hide/show on scroll ]
+    new SimpleBar(document.querySelector('.drp-tech-scrollble'));
+    new SimpleBar(document.querySelector('.scrollble-tech-block'));
+    new SimpleBar(document.querySelector('.nav-drp-tech-scrollble'));
+
+    var wow = new WOW({
+      animateClass: 'animated'
+    });
+    wow.init();
+
+    // slider start
+    $('.screen-slide').owlCarousel({
+      loop: true,
+      margin: 30,
+      center: true,
+      nav: false,
+      dotsContainer: '.app_dotsContainer',
+      URLhashListener: true,
+      items: 1
+    });
+    $('.workspace-slider').owlCarousel({
+      loop: true,
+      margin: 30,
+      center: true,
+      nav: false,
+      dotsContainer: '.workspace-card-block',
+      URLhashListener: true,
+      items: 1.5
+    });
+    // slider end
+    // marquee start
+    $('.marquee').marquee({
+      duration: 500000,
+      pauseOnHover: true,
+      startVisible: true,
+      duplicated: true
+    });
+    $('.marquee-1').marquee({
+      duration: 500000,
+      pauseOnHover: true,
+      startVisible: true,
+      duplicated: true,
+      direction: 'right'
+    });
+    // marquee end</script><!-- [Page Specific JS] end -->
+</body>
+<!-- Mirrored from ableproadmin.com/tailwind/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 24 Nov 2024 05:57:10 GMT -->
+
+</html>
