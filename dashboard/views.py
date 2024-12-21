@@ -7,7 +7,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import SocialMediaPlatformCredentials, SocialMedia
+from services.instaServices import getUserInfo
 from django.shortcuts import render, get_object_or_404
+import pdb
 
 
 def index(request):
@@ -75,22 +77,30 @@ def create_social_media_platform(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
+        access_tokens=request.POST.get('access_tokens')
+        if access_tokens:
+            instaData=getUserInfo(access_tokens)            
+        else:
+            messages.success(request, 'Please Enter your access token for now.')
+            return redirect('dashboard')
+        
         social_media_id = request.POST.get('social_media')
         if username and password and social_media_id:
             social_media = SocialMedia.objects.get(id=social_media_id)
             SocialMediaPlatformCredentials.objects.create(
                 user=request.user,  
                 social_media=social_media,
-                username=username,
-                password=password,  
+                username=instaData['username'],
+                inst_uid=instaData['instaUid'],
+                password=password, 
+                access_token=access_tokens,
+                inst_progile_img=instaData['instProfileImg']
             )
             messages.success(request, 'Platform added successfully!')
             return redirect('dashboard')
         else:
             messages.error(request, 'Please fill out all fields.')
-
     social_media_list = SocialMedia.objects.all()
-
     return render(request, 'create_social_media_platform.html', {
         'social_media_list': social_media_list
     })
@@ -98,6 +108,4 @@ def create_social_media_platform(request):
 @login_required
 def SocialMediaProfile(request, id):
     social_media_profile = get_object_or_404(SocialMediaPlatformCredentials, id=id, user=request.user)
-
-    # Pass the profile data to the template
     return render(request, 'social_media/profile.html', {'social_media_profile': social_media_profile})
