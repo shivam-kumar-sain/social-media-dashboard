@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import SocialMediaPlatformCredentials, SocialMedia
-from services.instaServices import getUserInfo
+from services.instaServices import getUserInfo,getInstaPost
 from django.shortcuts import render, get_object_or_404
 import pdb
 
@@ -18,7 +18,10 @@ def index(request):
 @login_required
 def dashboard(request):
     user = request.user
-    return render(request, 'dashboard.html')
+    social_media_profile = get_object_or_404(SocialMediaPlatformCredentials, id=1, user=request.user)
+    posts=getInstaPost(social_media_profile.access_token)
+    print(posts['data'])
+    return render(request, 'dashboard.html',{'insta_post': len(posts['data'])})
 
 @login_required
 def analytics(request):
@@ -109,3 +112,10 @@ def create_social_media_platform(request):
 def SocialMediaProfile(request, id):
     social_media_profile = get_object_or_404(SocialMediaPlatformCredentials, id=id, user=request.user)
     return render(request, 'social_media/profile.html', {'social_media_profile': social_media_profile})
+
+@login_required
+def insta_posts(request, id):
+    social_media_profile = get_object_or_404(SocialMediaPlatformCredentials, id=id, user=request.user)
+    posts=getInstaPost(social_media_profile.access_token)
+    print(posts)
+    return render(request, 'social_media/instaPost.html', {'posts': posts,'social_media_profile': social_media_profile})

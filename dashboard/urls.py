@@ -12,4 +12,5 @@ urlpatterns = [
     path('password-reset/', views.password_reset, name='password_reset'),  
     path('create_social_media_platform/', views.create_social_media_platform, name='create_social_media_platform'),  
     path('social-media-profile/<int:id>', views.SocialMediaProfile, name='social-media-profile'),
+    path('insta-posts/<int:id>',views.insta_posts,name='insta-posts')
 ]

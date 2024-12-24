@@ -4,7 +4,6 @@
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
-<!-- [ Main Content ] start -->
 {% load static %}
 <div class="pc-container">
     <div class="pc-content">
@@ -69,8 +68,8 @@
                                         <div class="text-center mt-3">
                                             <div class="chat-avtar inline-flex mx-auto justify-center"><img
                                                     class="rounded-full w-[60px]"
-                                                    src="{% static 'images/user/avatar-5.jpg' %}" alt="User image"></div>
-                                            <h5 class="mb-0">Aaron Poole</h5>
+                                                    src="{{ social_media_profile.inst_progile_img }}" alt="User image"></div>
+                                            <h5 class="mb-0">{{ social_media_profile.username }}</h5>
                                             <p class="text-muted text-sm">Manufacturing Director</p>
                                             <hr class="my-4 border-secondary-500/10">
                                             <div
